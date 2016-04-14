@@ -15,21 +15,6 @@ To deploy your template use either Azure PowerShell or Azure CLI, read below how
 ## Azure PowerShell
 Open Azure PowerShell
 ```powershell
-Switch-AzureMode AzureResourceManager
-Add-AzureAccount
-New-AzureResourceGroup -Name azuredktest -Location westeurope -TemplateParameterFile .\website.param.dev.json -TemplateFile .\website.json
+Add-AzureRmAccount
+New-AzureRmResourceGroup -Name azuredktest -Location eastus -TemplateParameterFile .\website.param.dev.json -TemplateFile .\website.json
 ```
-
-## Azure CLI
-Open Azure CLI
-```
-azure login
-azure config mode arm
-azure group create -n azuredktest -l westeurope -f website.json -e website.param.dev.json -d azuredktest
-azure group deployment show azuredktest
-```
-
-Alternatively, you can click this button, to be taken to the Azure portal and do the deployment from there (then you will use my complete template) 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsjkp%2Fazure-arm-hol%2Fmaster%2Flab1-azure-webapps%2Fstep01-create-webapp-and-hosting-plan%2Fcomplete%2Fwebsite.json" target="_blank">
-    <img src="http://azuredeploy.net/deploybutton.png"/>
-</a>

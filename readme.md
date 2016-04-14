@@ -1,4 +1,4 @@
-#Azure Resource Manager Templates Hands-on Labs
+#Cincy Azure Bootcamp - Azure Resource Manager HOL
 These hands-on labs are designed to help you get familiar with Azure Resource Manager.
 
 #Prerequisites
