@@ -1,0 +1,30 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "newStorageAccountName": {
+      "value": "azuredkholvm"
+    },
+    "adminUsername": {
+      "value": "azuredk"
+    },
+    "adminPassword": {
+      "value": "HighlyS3cure"
+    },
+    "dnsNameForPublicIP": {
+      "value": "azuredkholvm"
+    },
+    "vmName": {
+      "value": "azuredkvm"
+    },
+     "vmDSCExtensionName": {
+      "value": "DSCSetupIIS"
+    },
+    "vmDSCExtensionModulesUrl": {
+      "value": "https://github.com/sjkp/azure-arm-hol/raw/master/lab2-azure-virtualmachines/step04-setup-iis-with-dsc/complete/azuredkwebsite.ps1.zip"
+    },
+    "vmDSCExtensionConfigurationFunction": {
+      "value": "azuredkwebsite.ps1\\azuredkwebsite"
+    }
+  }
+}
