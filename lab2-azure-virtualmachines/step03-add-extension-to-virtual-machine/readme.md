@@ -8,14 +8,12 @@ The extensions I have choosen to install is Symantec Endpoint Protection but fee
 ## How to get a list of extensions 
 To get a list of extension that you can choose to install use the following PowerShell Commands from an azure powershell (note this scripts takes a while, as it goes through all publisher and lists all extensions)
 
-A compiled list generated 22-08-2015 can be found here https://gist.github.com/sjkp/0432b055400b3c3c4504
 ```powershell
-Switch-AzureMode AzureResourceManager
-$location = "West Europe"
-Get-AzureVMImagePublisher -Location $location | Select PublisherName |% {
+$location = "East US"
+Get-AzureRmVMImagePublisher -Location $location | Select PublisherName |% {
 	$publisher =  $_.PublisherName
-	Get-AzureVMExtensionImageType -Location $location -Publisher $publisher |% {
-		Get-AzureVMExtensionImage -Location $location -Publisher $publisher -Type $_.Type
+	Get-AzureRmVMExtensionImageType -Location $location -Publisher $publisher |% {
+		Get-AzureRmVMExtensionImage -Location $location -Publisher $publisher -Type $_.Type
 	}
 }
 
@@ -30,5 +28,5 @@ If you encounter problems during the installation of the VM Extension, you can e
 
 To check if the VM Extension is properly installed you can use the following command
 ```powershell
-Get-AzureVMExtension -ResourceGroupName "mytestgroup" -VMName "azuredk" -Name "<name-of-extension>"
+Get-AzureRmVMExtension -ResourceGroupName "mytestgroup" -VMName "azuredk" -Name "<name-of-extension>"
 ```

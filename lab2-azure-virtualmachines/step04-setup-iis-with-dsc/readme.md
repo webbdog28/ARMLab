@@ -3,7 +3,7 @@ To configure the Virtual Machine after it has been provisioned we can use DSC. D
 
 The desired state config file we are going to use is quite simple. It looks like this
 ```powershell
-Configuration azuredkwebsite
+Configuration GABWebsite
 {
   param ($MachineName)
 
@@ -35,8 +35,6 @@ The DSC file have to be added to a zip file that must be uploaded somewhere so t
 
 We will use the same template as in the last step with an extra resource added, namely the DSC VM extension. 
 
-You can find the information for the DSC VM extension in https://gist.github.com/sjkp/0432b055400b3c3c4504. 
-
 Note that the DSC extension does require a settings object, the settings object have the following structure
 ```json
 {
@@ -54,7 +52,7 @@ Note that the DSC extension does require a settings object, the settings object 
 ###Remove the VM DSC Extension
 If the installation of the VM DSC extension fails and you want to try over you can completely remove it from the VM using the following command
 ```
-Remove-AzureVMDscExtension -ResourceGroupName mytestgroup -VMName azuredkvm -Name <name-of-dsc-extension>
+Remove-AzureRmVMDscExtension -ResourceGroupName mytestgroup -VMName azuredkvm -Name <name-of-dsc-extension>
 ```
 
 ## Extra Challenges

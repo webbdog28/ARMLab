@@ -19,21 +19,19 @@ In order to specify an image you must know the following three things
 
 All of these things can be found with PowerShell, from an Azure PowerShell use the following commands:
 ```powershell
-Switch-AzureMode AzureResourceManager
-$location = "West Europe"
-Get-AzureVMImagePublisher -Location $location | Select PublisherName
+$location = "East US"
+Get-AzureRmVMImagePublisher -Location $location | Select PublisherName
 $publisher = "MicrosoftWindowsServer"
-Get-AzureVMImageOffer -Location $location -Publisher $publisher | Select Offer
+Get-AzureRmVMImageOffer -Location $location -Publisher $publisher | Select Offer
 $offer = "WindowsServer"
-Get-AzureVMImageSku -Location $location -Publisher $publisher -Offer $offer | Select Skus
+Get-AzureRmVMImageSku -Location $location -Publisher $publisher -Offer $offer | Select Skus
 ```
 
 ##VM Size (hardwareProfile)
 When deploying a VM we also need to specify its size (its hardwareProfile) as the different type of machines are dependend on the location you deploy to it is relevant to use the following PowerShell commands to figure out what there is to choose from
 ```powershell
-Switch-AzureMode AzureResourceManager
-$location = "West Europe"
-Get-AzureVMSize -Location $location | ogv 
+$location = "East US"
+Get-AzureRmVMSize -Location $location | ogv 
 ``` 
 
 ## Deployment

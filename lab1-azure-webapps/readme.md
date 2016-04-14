@@ -6,5 +6,3 @@ The lab consists of the following steps.
 - [Step 03 - Add App Settings](step03-add-app-settings/readme.md)
 - [Step 04 - Add Azure Storage](step04-add-azure-storage/readme.md)
 - [Step 05 - Add Azure SQL Database](step05-add-azure-sql-database/readme.md)
-- [Step 06 - Add Github Integration](step06-add-github-integration/readme.md)
-- [Step 07 - Multiregion Deploy](step07-multiregion-deploy/readme.md)
