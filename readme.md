@@ -17,7 +17,7 @@ The begin folder contains a starting template that can be used to help you get s
 
 If you get stuck or just want inspiration the complete folder contains one possible solution to the task. 
 
-Please note that if you try to run the complete solution with the provided *.param.json files you might encounter errors if other people have deployed resources with the same names, so you should always update the names to be unique.  
+**Please note that if you try to run the complete solution with the provided *.param.json files you might encounter errors if other people have deployed resources with the same names, so you should always update the names to be unique.**
 
 ##Two labs
 This hands on sessions consists of two labs
