@@ -9,7 +9,7 @@
             "value": "azuredk-hostingplan"
         },
         "siteLocation": {
-            "value": "West Europe"
+            "value": "East US"
         }       
     }
 }

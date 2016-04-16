@@ -46,7 +46,7 @@
         }
     },
     "variables": {
-        "location": "West Europe",
+        "location": "East US",
         "publicIPAllocationMethod": "Dynamic",
         "virtualNetworkAddressPrefix": "10.0.0.0/16",
         "virtualNetworkSubnetAddressPrefix": "10.0.0.0/24",

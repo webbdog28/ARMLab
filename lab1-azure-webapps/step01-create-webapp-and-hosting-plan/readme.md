@@ -16,5 +16,5 @@ To deploy your template use either Azure PowerShell or Azure CLI, read below how
 Open Azure PowerShell
 ```powershell
 Add-AzureRmAccount
-New-AzureRmResourceGroup -Name azuredktest -Location eastus -TemplateParameterFile .\website.param.dev.json -TemplateFile .\website.json
+New-AzureRmResourceGroupDeployment -ResourceGroupName mytesgroup -TemplateParameterFile .\website.param.dev.json -TemplateFile .\website.json
 ```

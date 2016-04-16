@@ -4,6 +4,8 @@ In the first step we are going to prepare an azure resource group for provisioni
 
 This first step is purposedly split in two, as provisioning a machine takes a several minutes, so making sure part 1 works before moving to part 2 will save you some time. 
 
+Note: You will need to choose a unique storage account name in the parameters file or else there will be collisions.
+
 In the step 1 we will create four of the five different resources needed to create a virtual machine.  
 
 The five resources we need to provision a VM are:

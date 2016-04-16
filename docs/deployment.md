@@ -8,7 +8,8 @@ In order to deploy the resource group you need to open a Azure PowerShell and ru
 Note if you haven't deleted the resource group from last step you can apply the template to the existing resource group and only get the changes added to the resource group.
 ```powershell
 Add-AzureRmAccount
-New-AzureRmResourceGroup -Name "mytestgroup" -Location eastus -TemplateParameterFile .\vm.param.json -TemplateFile .\vm.json
+New-AzureRmResourceGroup -Name "mytestgroup" -Location EastUs
+New-AzureRmResourceGroupDeployment -ResourceGroupName mytestgroup -TemplateFile .\vm.json -TemplateParameterFile .\vm.param.json -Verbose
 ```
 
 ####Remove Resource Group
